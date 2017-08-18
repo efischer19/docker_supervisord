@@ -1,0 +1,28 @@
+ericfischer@dhcp-18-189-24-172:~/work/scratch$ docker run f5a4a7e6accd
+2017-08-18 16:23:05,723 CRIT Supervisor running as root (no user in config file)
+2017-08-18 16:23:05,725 INFO supervisord started with pid 1
+2017-08-18 16:23:06,734 INFO spawned: 'script1' with pid 9
+2017-08-18 16:23:06,736 INFO spawned: 'script2' with pid 10
+Starting script 1
+2017-08-18 16:23:06,741 INFO success: script1 entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2017-08-18 16:23:06,741 INFO success: script2 entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+Inside main loop 1
+Starting script 2
+Inside main loop 1
+Exiting script 2
+2017-08-18 16:23:26,750 INFO exited: script2 (exit status 0; expected)
+2017-08-18 16:23:27,755 INFO spawned: 'script2' with pid 16
+Starting script 2
+2017-08-18 16:23:27,760 INFO success: script2 entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+Inside main loop 1
+Exiting script 2
+2017-08-18 16:23:47,767 INFO exited: script2 (exit status 0; expected)
+2017-08-18 16:23:48,773 INFO spawned: 'script2' with pid 20
+Starting script 2
+2017-08-18 16:23:48,778 INFO success: script2 entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+Inside main loop 1
+<note - this is the points at which I ran `docker stop` in a different terminal window>
+2017-08-18 16:23:54,114 WARN received SIGTERM indicating exit request
+2017-08-18 16:23:54,114 INFO waiting for script1, script2 to die
+2017-08-18 16:23:54,115 INFO stopped: script2 (terminated by SIGTERM)
+2017-08-18 16:23:54,116 INFO stopped: script1 (terminated by SIGTERM)
